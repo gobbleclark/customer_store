@@ -1,0 +1,23 @@
+<nav class="ui menu">
+    <%= link_to "Shopcustomyze", root_path, class: "item"%>
+
+    <% if current_user%>
+            <%= link_to "Customer", customers_path, class: 'item' %>
+            <%= link_to "Add Customer", new_customer_path, class: "item"%>
+        <%end%>
+    <div class="right menu">
+        <% if current_user%>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "item" %>
+        <% else %>
+            <%= link_to "Log In", new_user_session_path, class: "item" %>
+            <%= link_to "Create Account", new_user_registration_path, class: "item" %>
+        <%end%>
+
+    </div>
+
+
+
+
+
+
+</nav>

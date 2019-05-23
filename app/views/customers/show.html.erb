@@ -1,0 +1,26 @@
+
+<div class="ui cards">
+  <div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+      <div class="header">
+        <%= @customer.full_name %>
+      </div>
+      <div class="meta">
+       <%= @customer.email %>
+      </div>
+      <div class="description">
+       <%= @customer.phone %>
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="ui two buttons">
+        <div class="ui basic orange button">  
+        <%= link_to "Edit", edit_customer_path(@customer) %>
+        </div>
+        <div class="ui basic red button">
+        <%= link_to "Delete", @customer, method: :delete %>
+        </div>
+      </div>
+    </div>
+  </div>
